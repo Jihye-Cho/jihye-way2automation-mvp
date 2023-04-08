@@ -15,6 +15,11 @@ class AlertPage:
 
       self.iframe = 'div#example-1-tab-2 iframe'
       self.button = 'body>button'
+      self.ele_iframe_msg = 'body>p'
+
+      self.alert_msg = 'Please enter your name'
+      self.alert_newtext = 'Hermione Granger'
+      self.iframe_expt_msg = 'Hello ' + self.alert_newtext + '! How are you today?'
 
     except:
       print("Exception on Registration page", sys.exc_info()[0])
@@ -26,9 +31,14 @@ class AlertPage:
   def move_to_inputalert_tab(self):
     self.tab_alert.click()
 
-  def click_button_to_show_alert(self):
+  def switch_to_iframe(self):
     curframe = WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, self.iframe)))
     self.driver.switch_to.frame(curframe)
-    self.driver.find_element(By.CSS_SELECTOR, self.button).click()
-  #   self.driver.find_element(By.TAG_NAME, 'button').click()
 
+  def click_button_to_show_alert(self):
+    self.driver.find_element(By.CSS_SELECTOR, self.button).click()
+
+  def verify_iframe_text(self):
+    iframe_text = self.driver.find_element(By.CSS_SELECTOR, self.ele_iframe_msg).text
+    print(iframe_text)
+    assert iframe_text == self.iframe_expt_msg
