@@ -20,13 +20,10 @@ class RegistrationPage:
       self.input_email = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.NAME, 'email')))
       self.input_password = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.NAME, 'password')))
       self.input_cpassword = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.NAME, 'c_password')))
-
       self.input_submit = WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'input[type="submit"]:first-of-type')))
 
-      self.error_field = 'label.error_p:first-of-type'
-      
+      self.error_field = 'label.error_p:first-of-type'      
       self.input_error = 'input.error_p:first-of-type'
-
       
       self.value_firstname = 'test_firstname'
       self.value_lastname = 'test_lastname'
@@ -34,8 +31,7 @@ class RegistrationPage:
       self.value_username = 'testuser'
       self.value_invalid_email = 'test'
       self.value_valid_email = 'test@test.com'
-      self.value_password = 'password'
-      
+      self.value_password = 'password'      
       self.error_message = 'This field is required.'
       
     except:

@@ -8,10 +8,11 @@ from tests.form_test import TestForm
 
 def suite():
     suite =  unittest.TestSuite()
-    suite.addTest(TestRegistration('visit_registration_page_enter_name')) 
-    suite.addTest(TestRegistration('enter_required_fields')) 
+    suite.addTest(TestRegistration('visit_registration_page_enter_name'))
+    suite.addTest(TestRegistration('enter_required_fields'))
     suite.addTest(TestAlert('verify_alert_page'))
-    suite.addTest(TestForm('verify_form_page'))
+    suite.addTest(TestForm('basic_form_multiple_files'))
+    suite.addTest(TestForm('basic_form_validations'))
     suite.addTest(CommonTest('driver_quit'))
     return suite
 
