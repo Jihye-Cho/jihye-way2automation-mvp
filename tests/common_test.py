@@ -12,8 +12,10 @@ class CommonTest(unittest.TestCase):
 	options.add_argument('--remote-debugging-port=9222')
 	options.add_argument('--disable-dev-shm-usage')
 	options.add_experimental_option('excludeSwitches', ['enable-logging'])
-	# to run this test suite from local environment, the chromedriver.exe should be used.
-	driver = webdriver.Chrome()
+	# TODO run this test suite from CI tools, need to get chromedriver path on the image and provide options
+	# driver = webdriver.Chrome('./chromedriver', options=options)
+	driver = webdriver.Chrome('./chromedriver')
+	driver.implicitly_wait(10)
 
 	def driver_quit(self):
 		self.driver.quit()

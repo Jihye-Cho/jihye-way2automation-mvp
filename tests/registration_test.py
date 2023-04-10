@@ -23,7 +23,7 @@ class TestRegistration(CommonTest):
       errmsg = self.driver.find_element_by_css_selector(registrationpage.error_field)
       assert registrationpage.error_message in errmsg.text
 
-      ## TODO count length of the errorred elements div.registration_form label.error_p
+      ## TODO count length of the errorred elements. len(div.registration_form label.error_p)
 
     except:      
       print("Exception on visit_registration_page_enter_name", sys.exc_info()[0])

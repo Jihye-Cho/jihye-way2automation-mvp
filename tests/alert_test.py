@@ -22,7 +22,7 @@ class TestAlert(CommonTest):
       time.sleep(3)
 
       alert = self.driver.switch_to_alert()
-      self.assertEqual(alert.text, alertpage.alert_msg) # TODO to show assertionerror in report
+      self.assertEqual(alert.text, alertpage.alert_msg)
       
       alert.send_keys(alertpage.alert_newtext)
       alert.accept()
