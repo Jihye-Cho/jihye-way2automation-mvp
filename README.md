@@ -16,6 +16,6 @@ Write three automated browser-based tests for: <br>
 1. Execute the command `python testsuite.py` on the root
 
 ## Test Report
-After run the testsuite.py, there'll be a test report generated under reports. <br>
+After run the testsuite.py, there'll be a test report generated under `.reports/`. <br>
 Here's an example. <br><br>
 ![image](https://user-images.githubusercontent.com/63831454/230893994-3d8c36d2-2c9e-40d6-a637-6b4156c45473.png)
